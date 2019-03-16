@@ -1,0 +1,22 @@
+{
+    "name": "LoveMail",
+    "version": "1.0.0",
+    "description": "广州传智播客前端公开课项目",
+    "main": "mian.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "传智播客",
+        "黑马程序员"
+    ],
+    "author": "广州传智播客前端",
+    "license": "ISC",
+    "dependencies": {
+        "art-template": "^4.13.2",
+        "cheerio": "^1.0.0-rc.2",
+        "node-schedule": "^1.3.2",
+        "nodemailer": "^5.1.1",
+        "superagent": "^4.1.0"
+    }
+}
