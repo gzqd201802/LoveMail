@@ -134,15 +134,15 @@ async function sendNodeMail() {
         port: 465,
         secure: true, // 开启加密协议，需要使用 465 端口号
         auth: {
-            user: "***@163.com", // 用户名
-            pass: "***" // 客户端授权密码
+            user: "gzqd201802@163.com", // 用户名
+            pass: "1234qwer" // 客户端授权密码
         }
     });
 
     // 设置电子邮件数据
     let mailOptions = {
-        from: '"帅气的小哥哥" <***@163.com>', // 发件人邮箱
-        to: "***@**.com", // 收件人列表
+        from: '"帅气的小哥哥" <gzqd201802@163.com>', // 发件人邮箱
+        to: "gzqd201803@163.com", // 收件人列表
         subject: "这个一封充满爱的邮件", // 标题
         html: html // html 内容
     };
@@ -160,8 +160,9 @@ async function sendNodeMail() {
 
 // 6. 定时每天 5时20分14秒发送邮件给女（男）朋友
 // 6.1 创建定时器任务
+console.log("爱的邮件正在运行，每天05:20，会自动发送邮件女朋友...");
 schedule.scheduleJob("14 20 5 * * *", function() {
     // 时间到了，执行发送邮件的任务
     sendNodeMail();
-    console.log("定时任务的邮件发送成功");
+    console.log("现在时间是05:20，爱的邮件发送成功♥");
 });

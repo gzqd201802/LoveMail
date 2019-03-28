@@ -1,3 +1,7 @@
+# 爱的邮件效果预览
+
+![](assets/demo.gif)
+
 # Node 环境下载
 
 Node 官网下载：http://nodejs.cn/download/
@@ -147,8 +151,8 @@ async function sendNodeMail() {
         port: 465,
         secure: true, // 开启加密协议，需要使用 465 端口号
         auth: {
-            user: "gzqd201802@163.com", // 用户名
-            pass: "1234qwer" // 授权密码
+            user: "gzqd201802@163.com", // 自己的邮箱用户名
+            pass: "授权密码" 			 // 自己的邮箱授权密码
         }
     });
 
@@ -328,17 +332,17 @@ async function sendNodeMail() {
         port: 465,
         secure: true, // 开启加密协议，需要使用 465 端口号
         auth: {
-            user: "***@163.com", // 用户名
-            pass: "***" // 客户端授权密码
+            user: "gzqd201802@163.com", // 自己的邮箱用户名
+            pass: "***" 				// 自己的邮箱授权密码
         }
     });
 
     // 设置电子邮件数据
     let mailOptions = {
-        from: '"帅气的小哥哥" <***@163.com>', // 发件人邮箱
-        to: "***@**.com", // 收件人列表
-        subject: "这个一封充满爱的邮件", // 标题
-        html: html // html 内容
+        from: '"帅气的小哥哥" <gzqd201802@163.com>',  // 自己的邮箱用户名
+        to: "***@**.com",                          // 收件人列表
+        subject: "这个一封充满爱的邮件",              // 邮件标题
+        html: html                                // 设置邮件为 html 内容
     };
     // 发送邮件
     transporter.sendMail(mailOptions, (error, info = {}) => {
